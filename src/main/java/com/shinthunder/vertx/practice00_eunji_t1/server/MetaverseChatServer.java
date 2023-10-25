@@ -1,7 +1,6 @@
 package com.shinthunder.vertx.practice00_eunji_t1.server;
 
 import com.hazelcast.config.Config;
-import com.shinthunder.vertx.practice00_eunji_t1.object.ClientAction;
 import com.shinthunder.vertx.practice00_eunji_t1.object.MetaverseChat;
 import io.vertx.core.*;
 import io.vertx.core.http.ServerWebSocket;
@@ -458,7 +457,7 @@ public class MetaverseChatServer extends AbstractVerticle {
 
     private static VertxOptions configureVertxOptions() {
         Config hazelcastConfig = new Config();
-        hazelcastConfig.setClusterName("metaverse-chat");
+        hazelcastConfig.setClusterName("metaverse-chat-main");
 //        hazelcastConfig.setCPSubsystemConfig(new CPSubsystemConfig().setCPMemberCount(3)); // 여기 주석을 쳐야
         ClusterManager mgr = new HazelcastClusterManager(hazelcastConfig);
         return new VertxOptions().setClusterManager(mgr);

@@ -1,7 +1,6 @@
 package com.shinthunder.vertx.practice00_eunji_t1.object;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 
 public class MetaverseChat implements Serializable {
 
@@ -9,11 +8,20 @@ public class MetaverseChat implements Serializable {
     private int userId;
     private String nickname;
     private String receiver_nickname;
+    private int changeRoomNumber;
 
     private int roomNumber;
     private String timestamp;
     private int receiver_id;
     private String text;
+
+    public int getChangeRoomNumber() {
+        return changeRoomNumber;
+    }
+
+    public void setChangeRoomNumber(int changeRoomNumber) {
+        this.changeRoomNumber = changeRoomNumber;
+    }
 
     public String getNickname() {
         return nickname;
